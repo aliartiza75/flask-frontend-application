@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Github Navigator</title>
 </head>
-
 <body>
-    <!-- Search Term start -->
-    <h1>{{ result.search_term}}</h1>
-    <!-- Search Term  end -->
-    {% set repo_counter = 1 %}
-    {% for repo_object in result.repo_information %}
-        <!-- Repository Information start -->
-        <h2>{{ loop.index }}. {{repo_object.full_name}} </h2>
-        
-        {% set repo_counter = repo_counter + 1 %}
-        <!-- Creaton date of repository -->
-        <h3> Created at: {{repo_object.created_at}} </h3>
+    <!-- Get datetime start -->
+    <form action="/datetime" method="get">
+        <button type="submit">Get Date</button>
+    </form>
+    <!-- END -->
 
-        <a href="{owner_url}"><img src="{{repo_object.avatar_url}}" alt="avatar" height="42" width="42" /></a>
-        
-        <!-- Latest commit Information -->
-        <h3>Last Commit Details</h3>
-        
-        <strong>sha</strong>: {{repo_object.commit_sha}}  
-        <br/>
-        <strong>Last commit message</strong>: {{repo_object.commit_message}} 
-        <br/>
-        <strong>Last commit date</strong>: {{repo_object.commit_date}} 
-        <br/>
-        <strong>Last commit author</strong>: {{repo_object.commit_author}} |
-        <br/>
-        <strong>Committer avatar</strong> <a href="{owner_url}"><img src="{{repo_object.committer_avatar_url}}" alt="avatar" height="42" width="42" /></a>
-        <hr />
-    <!-- Repository Information start -->
-    {% endfor %}
+    <!-- move to index page start -->
+    <form action="/" method="get">
+        <button type="submit">Back</button>
+    </form>
+    <!-- END -->
+
+    <!-- check if result object is not none -->
+    {% if result != None %}
+    <h1>{{ result.datetime}}</h1>
+    {% endif %}
+    <!-- END -->
 </body>
-
 </html>
