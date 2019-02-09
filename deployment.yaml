@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: irti
+  labels:
+    app: node_docker
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: node_docker
+  template:
+    metadata:
+      labels:
+        app: node_docker
+    spec:
+      containers:
+      - name: nodedocker
+        image: aliartiza75/node_docker
+        ports:
+        - containerPort: 80
+      - name: staticweb
+        image: aliartiza75/staticweb
+        ports:
+        - containerPort: 80
