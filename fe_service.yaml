@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: htfrontendservice
+spec:
+  selector:
+    app: HTFE
+  ports:
+    - name: ports
+      port: 5002
+      targetPort: 5002
