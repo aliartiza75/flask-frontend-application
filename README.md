@@ -37,3 +37,26 @@ sudo kubectl apply -f deployment.yaml
 ```bash
 sudo kubectl apply -f htfe_service.yaml
 ```
+* To access the frontend service
+```bash
+# to get list of services, copy the CLUSTER_IP
+sudo kubectl get service
+
+# Open the browser and type this URL. It will display a web page containing two buttons. The Get Date button will call the backend service
+http://CLUSTER_IP:5002
+```
+
+* To curl the backend service from frontend pod
+```bash
+# To get pod list.
+sudo kubectl get pods
+
+# Copy the pod id of the frontend service and use the command below to enter the pod
+sudo kubectl exec -it <frontend-service-pod-id> /bin/bash
+
+# To curl the backend service
+curl -X GET "http://<backend-pod-ip>:5001/datetime"
+```
+
+
+
