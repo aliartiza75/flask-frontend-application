@@ -1,7 +1,6 @@
 # HT Frontend Repository
 
-This repository contains frontend logic and kubernetes manifests.
-
+This repository contains frontend logic and kubernetes manifests. I have used `minikube`. 
 
 # Guidelines for containerizing frontend
 * Building image
