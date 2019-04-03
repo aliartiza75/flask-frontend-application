@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "ht-fe.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "ht-fe.name" . }}
+    helm.sh/chart: {{ include "ht-fe.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.port }}
+      name: http
+  selector:
+    app.kubernetes.io/name: {{ include "ht-fe.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}

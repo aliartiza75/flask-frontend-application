@@ -25,6 +25,6 @@ spec:
           value: "5002"
         - name: BE_IP_ADDR
           value: "172.17.0.5:5001"
-        image: ht-fe:0.0.1
+        image: aliartiza75/ht-fe:0.0.2
         ports:
         - containerPort: 5002
