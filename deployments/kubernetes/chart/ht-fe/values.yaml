@@ -5,16 +5,22 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: stable
+  repository: aliartiza75/ht-fe
+  tag: 0.0.2
   pullPolicy: IfNotPresent
 
-nameOverride: ""
-fullnameOverride: ""
+nameOverride: "ht-fe"
+fullnameOverride: "ht-fe"
 
 service:
   type: ClusterIP
-  port: 80
+  port: 5002
+
+deploymentInfo:
+  envName: "development"
+  hostIP: "0.0.0.0"
+  hostPort: 5002
+  beIpAddr: "10.102.159.74:5001"
 
 ingress:
   enabled: false
