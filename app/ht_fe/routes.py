@@ -8,9 +8,9 @@
 
 # sys modules
 import os
-import json
+# import json
 from flask import Blueprint, render_template
-from flask import request, jsonify, abort
+# from flask import request, jsonify, abort
 from flask_api import status
 import requests
 mod = Blueprint('github_navigator', __name__)
