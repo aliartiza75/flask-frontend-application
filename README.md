@@ -1,3 +1,21 @@
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg)](https://sonarcloud.io/summary/new_code?id=aliartiza75_flask-frontend-application)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=aliartiza75_flask-frontend-application&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=aliartiza75_flask-frontend-application)
+
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=aliartiza75_flask-frontend-application&metric=bugs)](https://sonarcloud.io/summary/new_code?id=aliartiza75_flask-frontend-application)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=aliartiza75_flask-frontend-application&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=aliartiza75_flask-frontend-application)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=aliartiza75_flask-frontend-application&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=aliartiza75_flask-frontend-application)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=aliartiza75_flask-frontend-application&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=aliartiza75_flask-frontend-application)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=aliartiza75_flask-frontend-application&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=aliartiza75_flask-frontend-application)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=aliartiza75_flask-frontend-application&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=aliartiza75_flask-frontend-application)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=aliartiza75_flask-frontend-application&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=aliartiza75_flask-frontend-application)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=aliartiza75_flask-frontend-application&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=aliartiza75_flask-frontend-application)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=aliartiza75_flask-frontend-application&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=aliartiza75_flask-frontend-application)
+
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=aliartiza75_flask-frontend-application)](https://sonarcloud.io/summary/new_code?id=aliartiza75_flask-frontend-application)
+
+
+
 # Flask Frontend Application
 
 This repository contains frontend logic and kubernetes manifests. I have used `minikube` for this project. Installation steps is given in this [gist](https://gist.github.com/aliartiza75/3a34f059de62c7de04727dae6a363ea8) 
