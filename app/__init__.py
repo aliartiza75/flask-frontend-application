@@ -1,6 +1,5 @@
 from app.ht_fe.routes import mod
 from flask import Flask
-# from flask_api import FlaskAPI
 app = Flask(__name__)
 
 # registering application
