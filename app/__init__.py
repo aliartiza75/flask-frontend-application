@@ -1,6 +1,5 @@
 from app.ht_fe.routes import mod
-from flask import Flask, Blueprint
-from flask_api import FlaskAPI
+from flask import Flask
 app = Flask(__name__)
 
 # registering application
