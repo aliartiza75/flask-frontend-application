@@ -1,0 +1,25 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ht-fe
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: 256m
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: 120s
+    nginx.ingress.kubernetes.io/proxy-read-timeout: 60s
+    kubernetes.io/ingress.class: "nginx-external"
+spec:
+  tls:
+  - hosts:
+    - ht-fe.domain.com
+    secretName: ht-fe.domain.com
+  rules:
+  - host: ht-fe.domain.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: ht-fe
+          servicePort: 80
+~                               
