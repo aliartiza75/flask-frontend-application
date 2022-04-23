@@ -14,6 +14,8 @@ spec:
       labels:
         app: HTFE
     spec:
+      nodeSelector:
+        internal-apps: "true"
       containers:
       - name: htfrontend
         env:

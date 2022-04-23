@@ -1,5 +1,5 @@
 ---
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ht-fe
@@ -9,6 +9,7 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-connect-timeout: 120s
     nginx.ingress.kubernetes.io/proxy-read-timeout: 60s
     kubernetes.io/ingress.class: "nginx-external"
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   tls:
   - hosts:
@@ -19,7 +20,9 @@ spec:
     http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: ht-fe
-          servicePort: 80
-~                               
+          service:
+            name: ht-fe
+            port: 
+              number: 80                               
