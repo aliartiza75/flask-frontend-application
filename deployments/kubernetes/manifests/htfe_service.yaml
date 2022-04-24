@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: htfrontendservice
+  name: ht-fe
 spec:
   selector:
     app: HTFE
@@ -9,3 +9,4 @@ spec:
     - name: ports
       port: 5002
       targetPort: 5002
+  type: ClusterIP

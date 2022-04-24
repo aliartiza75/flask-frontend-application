@@ -15,7 +15,7 @@ spec:
         app: HTFE
     spec:
       nodeSelector:
-        internal-apps: "true"
+        external-apps: "true"
       containers:
       - name: htfrontend
         env:
@@ -26,7 +26,7 @@ spec:
         - name: FLASK_HOST_PORT
           value: "5002"
         - name: BE_IP_ADDR
-          value: "172.17.0.5:5001"
+          value: "ht-be:5001"
         image: aliartiza75/ht-fe:0.0.2
         ports:
         - containerPort: 5002
