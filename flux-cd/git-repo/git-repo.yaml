@@ -1,0 +1,14 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: htfrontend
+  namespace: default
+spec:
+  gitImplementation: libgit2
+  interval: 10s
+  url: https://github.com/aliartiza75/flask-frontend-application
+  secretRef:
+    name: flux-cd-github-repo-access
+  ref:
+    branch: main
