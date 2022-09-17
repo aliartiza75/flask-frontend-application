@@ -1,0 +1,25 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageUpdateAutomation
+metadata:
+  name: htfrontend
+  namespace: default
+spec:
+  git:
+    checkout:
+      ref:
+        branch: main
+    commit:
+      author:
+        email: aliartiza75@yahoo.com
+        name: aliartiza75
+      messageTemplate: '{{range .Updated.Images}}{{println .}}{{end}}'
+    push:
+      branch: main
+  interval: 10s
+  sourceRef:
+    kind: GitRepository
+    name: htfrontend
+  update:
+    path: ./deployments/kubernetes/manifests
+    strategy: Setters
+

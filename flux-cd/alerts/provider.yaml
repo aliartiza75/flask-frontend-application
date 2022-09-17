@@ -1,0 +1,10 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Provider
+metadata:
+  name: googlechat-htfrontend
+  namespace: default
+spec:
+  type: googlechat
+  channel: application-alerts
+  secretRef:
+    name: googlechat-url-htfrontend
